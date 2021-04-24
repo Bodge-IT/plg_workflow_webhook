@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="options">
+		<fieldset name="webhook">
+			<field
+				name="webhook_send_notification"
+				type="radio"
+				label="PLG_WORKFLOW_WEBHOOK_SENDNOTIFICATION_LABEL"
+				layout="joomla.form.field.radio.switcher"
+				default="1"
+				filter="boolean"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="webhook_text"
+				type="textarea"
+				label="PLG_WORKFLOW_WEBHOOK_ADDTEXT_LABEL"
+				description="PLG_WORKFLOW_WEBHOOK_ADDTEXT_DESC"
+				rows="3"
+				filter="safehtml"
+				showon="webhook_send_mail:1"
+			/>
+			<field
+				name="webhook_url"
+				type="url"
+				label="PLG_WORKFLOW_WEBHOOK_URL_LABEL"
+				description="PLG_WORKFLOW_WEBHOOK_URL_DESC"
+				default=""
+				showon="webhook_send_mail:1"
+			/>
+			<field
+				name="webhook_method"
+				type="list"
+				label="PLG_WORKFLOW_WEBHOOK_METHOD_LABEL"
+				description="PLG_WORKFLOW_WEBHOOK_METHOD_DESC"
+				default="GET"
+				showon="webhook_send_mail:1">
+				<option value="GET">PLG_WORKFLOW_WEBHOOK_METHOD_OPTION_GET_LABEL</option>
+				<option value="POST">PLG_WORKFLOW_WEBHOOK_METHOD_OPTION_POST_LABEL</option>
+				<option value="PUT">PLG_WORKFLOW_WEBHOOK_METHOD_OPTION_PUT_LABEL</option>
+				<option value="DELETE">PLG_WORKFLOW_WEBHOOK_METHOD_OPTION_DELETE_LABEL</option>
+			</field>
+
+			<field name="webhook_headers"
+				type="subform"
+				label="PLG_WORKFLOW_WEBHOOK_HEADERS_LABEL"
+				description="PLG_WORKFLOW_WEBHOOK_HEADERS_DESC"
+				multiple="true"
+				min="0"
+				max="5"
+				showon="webhook_send_mail:1">
+				<form>
+					<field
+						name="name"
+						type="text"
+						label="PLG_WORKFLOW_WEBHOOK_METHOD_SUBFORM_NAME_LABEL"/>
+					<field
+						name="value"
+						type="text"
+						label="PLG_WORKFLOW_WEBHOOK_METHOD_SUBFORM_VALUE_LABEL"/>
+				</form>
+			</field>
+		</fieldset>
+	</fields>
+</form>

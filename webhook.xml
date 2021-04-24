@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="workflow" method="upgrade">
+	<name>plg_workflow_webhook</name>
+	<author>Gaurav Jain</author>
+	<creationDate>April 2021</creationDate>
+	<copyright>Copyright (C) 2015 - 2021 Codextrous Software Pvt. Ltd. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>gaurav.jain028@gmail.com</authorEmail>
+	<authorUrl>www.codextrous.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_WORKFLOW_WEBHOOK_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="webhook">webhook.php</filename>
+		<folder>forms</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">plg_workflow_webhook.ini</language>
+		<language tag="en-GB">plg_workflow_webhook.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="whitelist"
+					type="WorkflowComponentSections"
+					label="JWORKFLOW_EXTENSION_WHITELIST_LABEL"
+					description="JWORKFLOW_EXTENSION_WHITELIST_DESCRIPTION"
+					multiple="multiple"
+					layout="joomla.form.field.list-fancy-select"
+				/>
+				<field
+					name="blacklist"
+					type="WorkflowComponentSections"
+					label="JWORKFLOW_EXTENSION_BLACKLIST_LABEL"
+					description="JWORKFLOW_EXTENSION_BLACKLIST_DESCRIPTION"
+					multiple="multiple"
+					layout="joomla.form.field.list-fancy-select"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>
