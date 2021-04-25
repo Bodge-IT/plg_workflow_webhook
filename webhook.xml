@@ -7,7 +7,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>gaurav.jain028@gmail.com</authorEmail>
 	<authorUrl>www.codextrous.com</authorUrl>
-	<version>1.0.0</version>
+	<version>0.0.1</version>
 	<description>PLG_WORKFLOW_WEBHOOK_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="webhook">webhook.php</filename>
